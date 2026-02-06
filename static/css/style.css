@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    --grey-text: #524e57;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.for_card {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap; 
+    gap: 25px;
+}
+.card{
+    width: 200px;
+    border-radius: 20px;
+    background-color: #f8f2fa;
+    border: 1px solid #cbc5d0;
+    flex: none; 
+}
+.roundborder {
+    border-radius: 20px;
+    width: 100%;
+}
+.card_text {
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-bottom: 2em;
+    padding-right: 1em;
+    letter-spacing: 0.03em;
+}
+.text {
+    color: var(--grey-text);
+    font-size: 10pt;
+    line-height: 1.5em;
+    margin-top: 1em;
+}
+.h {
+    color: #1d1b20;
+    font-size: 20pt;
+}
+.picture{
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-position: 50% 50%;
+    border-radius: 20px;
+}
+#omlet {background-image: url('images/омлет_чистый.png');}
+#maff {background-image: url('images/маффин_чистый.png');}
+#pumpkin_coup {background-image: url('images/суп-пюре_чистый.png');}
+#tea {background-image: url('images/чай_чистый.png');}
+#sugar {background-image: url('images/сахар_чистый.png');}
+#mors {background-image: url('images/компот.png');}
+
+#favor {background-image: url('../images/favorite.png');}
+#menu {background-image: url('../images/menu.png');}
+#pay {background-image: url('../images/pay.png');}
+
+.head {
+    margin-left: -10px;
+    margin-top: -10px;
+    margin-top: -150px;
+    outline: 2px solid black;
+}
+
+.roundborder {border-radius: 25px;}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: 20px;
+}
+
+#profile {
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    background-color: #DDFFFD;
+    flex-shrink: 0;
+}
+
+#name {
+    margin: 10px 15px;
+    width: 50%;
+}
+
+#date {
+    display: flex;
+    gap: 30px;
+    padding-right: 30px;
+    justify-content: center; 
+}
+
+.date_btn {
+    border-radius: 30px;
+    width: 60px;
+    height: 90px;
+    background-color: #f8f2fa;;
+    justify-content: center;
+    align-items: center; 
+    font-size: large;
+    border: 2px solid #cbc5d0;
+    cursor: pointer;
+}
+
+.meal {
+    background-color: #ffffff;
+    margin: 10px 5%;
+    overflow: hidden;
+}
+
+img.menu {
+    outline: 3px solid #8ca8b9;
+    background-color: #DDFFFD;
+    
+    border-radius: 10px;
+    margin-bottom: 20px;
+    max-width: 150px;
+    height: 150px;
+}
+.days {
+    color: #6b6b6c
+}
+
+.ver_1 {
+    background-color: #ddecff;
+    min-width: 200px;
+    min-height: 350px;
+    border: 1px solid #b9c5d5;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+.ver_2 {
+    background-color: #DDFFFD;
+    min-width: 200px;
+    min-height: 350px;
+    border: none;
+    text-decoration: none;
+    border-radius: 20px;
+    border: 1px solid #b9c5d5;
+}
+
+.ru {font-size: medium;}
+.price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.price-info {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+
+#profile_link {
+    margin: auto;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 2em;
+}
+
+#profile_main {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-image: url("images/профиль.png"); 
+    background-size: 100%;
+    background-position: center;
+    height: 50px;
+    width: 50px;
+}
+
+.get {
+    width: 30px;
+    height: 30px;
+    background-color: #DDECFF;
+    border: 2px solid #8ca8b9;
+    margin-right: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#enter {
+    background-color: #DDFFFD;
+    border: none;
+    width: 20%;
+    cursor: pointer;
+}
+#enter_link {
+    background-color: #DDFFFD;
+    justify-items: center;
+    margin: 10px 3% 0 20%;
+    padding: 0 5%;
+}
+
+
+.get_text {
+    font-size: medium;
+    margin-right: 10px;
+}
+
+.all_ver1 {
+    background-color: #DDFFFD;
+    border: none;
+    width: 50%;
+    margin: 15px 5%;
+    max-width: 700px;
+}
+
+.all_ver2 {
+    background-color: #DDECFF;
+    border: none;
+    width: 50%;
+    margin: 15px 5%;
+    max-width: 700px;
+}
+
+.arrow {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+#add_all {
+    width: 50%;
+    font-size: larger;
+    padding: 10px;
+    flex-wrap: none;
+    background-color: #DDFFFD;
+    margin: 30px auto 0 5%;
+}
+
+.log_cont {
+    place-items: center;
+    height: 100vh;
+    display: grid;
+}
+.log {
+    background-color: #DDFFFD;
+    padding: 20px;
+    font-size: larger;
+}
+
+
+
