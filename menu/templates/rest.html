@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Столовка</title>
+    <link href="{% static 'css/' %}style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div>
+        <img class="head" title="Посуда" height="400" width="1500" src="images\посуда.png">
+        <a href="profile.html"><button class="roundborder" id="profile_main"></button></a>
+    </div>
+
+    <h1 align="center">Меню</h1>
+    <h2 style="margin-left: 7%;">2 февраля</h2>
+    <div id="date" class="roundborder">
+        <a href="monday.html" style="text-decoration: none;"><button class="date_btn"><div class="days">пн</div> 2</button></a>
+        <button class="date_btn"><div class="days">вт</div>3</button>
+        <button class="date_btn"><div class="days">ср</div>4</button>
+        <button class="date_btn"><div class="days">чт</div>5</button>
+        <button class="date_btn"><div class="days">пт</div>6</button>
+        <button class="date_btn"><div class="days">сб</div>7</button>
+        <button class="date_btn"><div class="days">вс</div>8</button>
+    </div>
+
+    <div class="meal">
+        <div class="price">
+            <div class="price-info">
+                <h1 style="margin-left: 10px">Завтрак</h1>
+                <span class="ru">150р</span>
+            </div>
+            <div>
+                <button class="get"></button>
+                <div>
+                    <span class="get_text">Получить</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="for_card">
+            <div class="card">
+            <div>
+                <div class="picture" id="omlet"></div>
+            </div>
+            <div class="card_text">
+                <div class="h">Омлет</div>
+                <div class="text">Состав: яйца, молоко</div>
+            </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="picture" id="maff"></div>
+                </div>
+                <div class="card_text">
+                    <div class="h">Маффин</div>
+                    <div class="text">Состав: мука, яйца, какао</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="picture" id="tea"></div>
+                </div>
+                <div class="card_text">
+                    <div class="h">Чай</div>
+                    <div class="text">Состав: чай черный, вода</div>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <div class="picture" id="sugar"></div>
+                </div>
+                <div class="card_text">
+                    <div class="h">Сахар</div>
+                    <div class="text">Состав: сахар порционный</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    
+    <div class="meal">
+        <div class="price">
+            <div class="price-info">
+                <h1 style="margin-left: 10px">Обед</h1>
+                <span class="ru">200р</span>
+            </div>
+            <div>
+                <button class="get"></button>
+                <div>
+                    <span class="get_text">Получить</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="for_card">
+            <div class="card">
+            <div>
+                <div class="picture" id="punkin_coup"></div>
+            </div>
+            <div class="card_text">
+                <div class="h">Суп-пюре</div>
+                <div class="text">Состав: тыква, вода, соль</div>
+            </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="picture" id="mors"></div>
+                </div>
+                <div class="card_text">
+                    <div class="h">Морс</div>
+                    <div class="text">Состав: ягоды свежие, вода</div>
+                </div>
+            </div>
+
+    </div>
+
+        
+
+
+
+
+</body>
+</html>

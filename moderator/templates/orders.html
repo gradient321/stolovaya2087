@@ -1,0 +1,30 @@
+{% extends 'moderator.html' %}
+
+{% block content %}
+<table class="table table-hover table-striped">
+        <thead>
+          <tr>
+            <th>ФИО</th>
+            <th>Дата</th>
+            <th>Приём пищи</th>
+          </tr>
+        </thead>
+
+    {% for o in orders %}
+        <tr>
+            <td>{{ o.user_id.first_name }} {{ o.user_id.last_name }}</td>
+            <td>{{ o.date }}</td>
+            <td>
+                {% if o.meal_type == 'breakfast' %}
+                    Завтрак
+                {% elif o.meal_type == 'dinner' %}
+                    Обед
+                {% elif o.meal_type == 'snack' %}
+                    Полдник
+                {% endif %}
+            </td>
+        </tr>
+    {% endfor %}
+    </table>
+
+{% endblock %}

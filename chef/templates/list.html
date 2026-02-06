@@ -1,0 +1,25 @@
+{% extends 'chef.html' %}
+
+{% block content %}
+
+<table class="table table-hover table-striped">
+        <thead>
+          <tr>
+<!--            <th><a href="/moderator/menu/id/">ID</a></th>-->
+            <th>Название</th>
+            <th>Дата</th>
+            <th>Количество</th>
+              <th></th>
+          </tr>
+        </thead>
+
+    {% for m in menu %}
+        <tr>
+<!--            <td>{{ m.id }}</td>-->
+            <td>{{ m.dish_id }}</td>
+            <td>{{ m.date }}</td>
+            <td>{{ m.count }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+{% endblock %}

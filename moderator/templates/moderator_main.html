@@ -1,0 +1,121 @@
+{% extends 'moderator.html' %}
+
+{% block content %}
+<div class="row pt-5">
+    <div class="col-sm-5">
+        <div class="container">
+            Пункты меню | Последние 10
+        </div>
+        <table class="table">
+        <thead>
+          <tr>
+            <th>Название</th>
+            <th>Приёмы пищи</th>
+            <th>Количество</th>
+              <th></th>
+          </tr>
+        </thead>
+            {% for m in menu %}
+        <tr>
+            <td>{{ m.dish_id }}</td>
+            <td>
+                {% if m.meals == 'breakfast' %}
+                    {{ meal_choice.breakfast }}
+                {% elif m.meals == 'dinner' %}
+                    {{ meal_choice.dinner }}
+                {% elif m.meals == 'snack' %}
+                    {{ meal_choice.snack }}
+                {% elif m.meals == 'all' %}
+                    {{ meal_choice.all }}
+                {% endif %}
+            </td>
+            <td>{{ m.count }}</td>
+        </tr>
+    {% endfor %}
+        </table>
+    </div>
+
+<div class="col-sm-5">
+        <div>
+            Продажи | Последние 10
+        </div>
+<table class="table">
+        <thead>
+          <tr>
+            <th>ФИО</th>
+            <th>Дата</th>
+            <th>Приём пищи</th>
+          </tr>
+        </thead>
+
+    {% for o in orders %}
+        <tr>
+            <td>{{ o.user_id.first_name }} {{ o.user_id.last_name }}</td>
+            <td>{{ o.date }}</td>
+            <td>
+                {% if o.meal_type == 'breakfast' %}
+                    Завтрак
+                {% elif o.meal_type == 'dinner' %}
+                    Обед
+                {% elif o.meal_type == 'snack' %}
+                    Полдник
+                {% endif %}
+            </td>
+        </tr>
+    {% endfor %}
+    </table>
+
+    </div>
+</div>
+
+<div class="row pt-5">
+    <div class="col-sm-5">
+        <div>
+            Отзывы | Последние 10
+        </div>
+        <table class="table">
+        <thead>
+          <tr>
+            <th>ФИО</th>
+            <th>Отзыв</th>
+              <th>Дата</th>
+          </tr>
+        </thead>
+
+    {% for r in reviews %}
+        <tr>
+            <td>{{ r.user_id.first_name }} {{ r.user_id.last_name }}</td>
+            <td>
+                {{ r.text }}
+            </td>
+            <td>{{ r.date }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+    </div>
+
+    <div class="col-sm-5">
+        <div>
+            Заказы продуктов | Последние 10
+        </div>
+        <table class="table">
+        <thead>
+          <tr>
+            <th>Заказ</th>
+              <th>Дата</th>
+          </tr>
+        </thead>
+
+    {% for c in chef_orders %}
+        <tr>
+            <td>
+                {{ c.text }}
+            </td>
+            <td>{{ c.datetime }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+    </div>
+
+</div>
+{% endblock %}

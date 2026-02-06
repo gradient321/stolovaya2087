@@ -1,0 +1,34 @@
+{% extends 'chef.html' %}
+
+{% block content %}
+<table class="table table-hover table-striped">
+        <thead>
+          <tr>
+            <th>Заказ</th>
+            <th>Дата</th>
+            <th>
+                Подтвердить
+            </th>
+          </tr>
+        </thead>
+
+    {% for o in orders %}
+        {% if o.confirmation %}
+                <tr class="table-success">
+            {% else %}
+                    <tr>
+            {% endif %}
+            <td>{{ o.text }}</td>
+            <td>{{ o.datetime }}</td>
+            <td>
+                {% if o.confirmation %}
+                Подтверждено
+            {% else %}
+                Не подтверждено
+            {% endif %}
+            </td>
+        </tr>
+    {% endfor %}
+    </table>
+
+{% endblock %}
